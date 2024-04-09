@@ -92,7 +92,6 @@ obtainInstruction("steak", 0)
     // Bonus 1
     document.querySelector("#steakImg").removeAttribute("hidden");
   });
-
 // Iteration 3 using async/await
 async function makeBroccoli() {
   const step0 = await obtainInstruction("broccoli", 0);
@@ -148,31 +147,3 @@ Promise.all([pr0, pr1, pr2, pr3, pr4, pr5, pr6])
     document.querySelector("#brusselsSproutsImg").removeAttribute("hidden");
   })
   .catch((err) => console.log(err));
-
-// Bonus 2
-// Using Promise.all() with async/await syntax:
-/*
-const pr0 = obtainInstruction('broccoli', 0);
-const pr1 = obtainInstruction('broccoli', 1);
-const pr2 = obtainInstruction('broccoli', 2);
-const pr3 = obtainInstruction('broccoli', 3);
-const pr4 = obtainInstruction('broccoli', 4);
-const pr5 = obtainInstruction('broccoli', 5);
-const pr6 = obtainInstruction('broccoli', 6);
-async function makeBrusselSprouts() {
-  try {
-    const values = await Promise.all([pr0, pr1, pr2, pr3, pr4, pr5, pr6])
-    
-    values.forEach((instruction) => {
-      document.querySelector("#brusselsSprouts").innerHTML += `<li>${instruction}</li>`;
-    })
-    
-    document.querySelector("#brusselsSprouts").innerHTML += `<li>Brussels sprouts are ready!</li>`;
-    document.querySelector("#brusselsSproutsImg").removeAttribute("hidden");  
-    
-  } catch (error) {
-    console.log(err)
-  }    
-}
-makeBrusselSprouts();
-*/
